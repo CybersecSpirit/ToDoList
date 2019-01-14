@@ -14,7 +14,7 @@
 
       <ul>
         <% taches.forEach(function(todo, index){ %>
-          <li><a href="/todo/supprimer/<%= index %>">✘</a> <a href="/todo/modifier/<%= index %>"></a> <%= todo %> </li>
+          <li><a href="/todo/supprimer/<%= index %>">✘</a> <a href="/todo/modifier/<%= index %>" style="color:#499CE2; font-size:10px;">Modifier</a> <%= todo %> </li>
           <%});%>
         </ul>
         <form action="/todo/post" method ="post">
