@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Ma todolist</title>
+        <style>
+            a {text-decoration: none; color: black;}
+            * {margin-left: auto; margin-right: auto; width: 200px;}
+        </style>
+    </head>
+
+    <body>
+      <h1> Modifier <%= modif %> </h1>
+
+        <form action="/todo/modificateur/<%= idex %>" method ="post">
+          <input id="tache" type="text" name="tache" value="<%= modif %>" autofocus >
+          <input type="submit" name="Modifier" value="Modifier">
+        </form>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Ma todolist</title>
+        <style>
+            a {text-decoration: none; color: black;}
+            * {margin-left: auto; margin-right: auto; width: 200px;}
+        </style>
+    </head>
+
+    <body>
+      <h1> ToDo List </h1>
+
+      <ul>
+        <% taches.forEach(function(todo, index){ %>
+          <li><a href="/todo/supprimer/<%= index %>">✘</a> <a href="/todo/modifier/<%= index %>"></a> <%= todo %> </li>
+          <%});%>
+        </ul>
+        <form action="/todo/post" method ="post">
+          <input id="tache" type="text" name="tache" value="" autofocus >
+          <input type="submit" name="Ajouter" value="Envoyer">
+        </form>
+</html>
