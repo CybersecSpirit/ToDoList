@@ -15,5 +15,5 @@
     "description": "Un gestionnaire de todolist ultra basique",
     "scripts": {
       "start": "node app.js"
-    },
+    }
 }
