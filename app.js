@@ -2,13 +2,19 @@ var express = require('express');
 var session = require('cookie-session');
 var bodyParser = require('body-parser');
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
+var path = require('path');
+var PORT = process.env.PORT || 5000;
 
 
 var app = express();
 
 app.use(session({secret: 'todolist'}));
 
-app.use(function(req, res, next){
+app.use(express.static(path.join(__dirname, 'public')))
+.set('views', path.join(__dirname, 'views'))
+.set('view engine', 'ejs')
+
+.use(function(req, res, next){
   if(typeof(req.session.todolist) == "undefined"){
     req.session.todolist = [];
   }
@@ -48,4 +54,4 @@ app.use(function(req, res, next){
   res.redirect('/todo');
 });
 
-app.listen(8080);
+app.listen(PORT, () => console.log('Listening on ' + PORT ));

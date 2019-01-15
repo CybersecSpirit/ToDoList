@@ -8,12 +8,13 @@
         "express": "^4.16.4"
     },
     "engines": {
-      "node":"11.6.0",
-      "npm":"6.5.x"
+        "node": "11.6.0",
+        "npm": "6.5.x"
     },
     "author": "HardSpirit",
     "description": "Un gestionnaire de todolist ultra basique",
+    "main": "app.js",
     "scripts": {
-      "start": "node app.js"
+        "start": "node app.js"
     }
 }
